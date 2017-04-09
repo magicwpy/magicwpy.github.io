@@ -334,36 +334,13 @@
 
       
         
-          
-          #C++ Heap
-##heap
-堆 - 顶元素为最大或最小，每次以logn的代价调整堆顶元素
-STL- &lt; algorithm &gt;
-heap不属于STL组件，底层实现为vector形式的完全二叉树，需要用vector存储数据
-heap 缺省为max_heap
-除此之外，max_heap为 priority queue 的实现机制
-1. Make_Heapmake_heap (iter_first, iter_last)
-make_heap（iter_first, iter_last, comp）;
-默认建立最大堆，可以自定义comp
-eg:code
-vector&lt;int&gt; v;
-make_heap(v.begin(), v.end());
-2. Pop_Heap推出堆顶元素，但实际上是将堆顶元素移到末尾，即v.end()？
-pop操作堆顶并没有取出元素，而是放在vector的末尾
-需要利用 pop_back() 函数，将末尾元素剔除
-必须pop_back, 否则下次建堆会将末尾元素再次拍进去
-pop_heap(iter_first, iter_last);
-eg:code
-vector&lt;int&gt; v;
-make_heap(v.begin(), v.end());
-pop_heap(v.begin(), v.end));
-v.pop_back();//     
-3. Push_Heappush_heap(first, last);
-在末尾添加一个元素，并重新调整顺序
-4. Sort_Heapsort_heap(first, last);
-通过pop_heap 实现堆排序，最终输出非降序序列
-
-          
+          <p>#C++ Heap</p>
+<p>##heap</p>
+<p>堆 - 顶元素为最大或最小，每次以logn的代价调整堆顶元素</p>
+<p>STL- &lt; algorithm &gt;</p>
+<p>heap不属于STL组件，<br>底层实现为vector形式的完全二叉树，<br>需要用vector存储数据</p>
+<p>heap 缺省为max_heap</p>
+<p>除此之外，max_heap为 priority queue 的实现机制</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/09/cpp-heap/#more" rel="contents">
